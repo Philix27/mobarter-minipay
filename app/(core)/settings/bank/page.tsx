@@ -60,10 +60,10 @@ export default function BankAccountsPage() {
       <div className="px-5 w-full">
         {data!.length < 1 && <TextP>No accounts</TextP>}
 
-        {data &&
+        {/* {data &&
           data?.map((value, i) => (
             <Row key={i} title={value.bankName} subtitle={value.accountName} Icon={LuUtilityPole} />
-          ))}
+          ))} */}
 
         <Row title="Sample account" subtitle="Full Name" Icon={FaRegAddressBook} />
       </div>

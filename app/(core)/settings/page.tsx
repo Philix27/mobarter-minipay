@@ -3,7 +3,7 @@
 import React from 'react';
 import { Navbar, Row, SimpleRow, Spinner, TextH } from '@/components';
 import { IoMoon, IoPersonOutline } from 'react-icons/io5';
-import { AppStores, Tokens, use3Wagmi, useAppRouter } from '@/lib';
+import {  use3Wagmi, useAppRouter } from '@/lib';
 import { BiLogOut, BiSun } from 'react-icons/bi';
 import { useBalance } from 'wagmi';
 import { SwitchChain } from './_comps';
@@ -11,7 +11,6 @@ import { useTheme } from 'next-themes';
 import { AddressFn } from '@/lib';
 
 export default function SettingsPage() {
-  const store = AppStores.useChat();
   const router = useAppRouter();
   const { logout, address } = use3Wagmi(); // Just for initialization of values
   const { setTheme, theme } = useTheme();
@@ -27,12 +26,7 @@ export default function SettingsPage() {
       />
 
       <div className={'flex flex-col items-center px-4 py-4 mb-10'}>
-        <div className="size-[120px]">
-          <img src={store.userInfo?.profileImage!} className="size-full" />
-        </div>
         <div className="w-full my-4 bg-secondary px-4 rounded-md">
-          <SimpleRow left={'Name'} right={store.userInfo?.name!} />
-          <SimpleRow left={'Email'} right={store.userInfo?.email!} />
           {/* <Balance address={address} title={Tokens.CELO.symbol} /> */}
           <Balance address={address} title={'celo'} />
           <Balance address={address} title={'cUSD'} tokenAddress="0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1" />
