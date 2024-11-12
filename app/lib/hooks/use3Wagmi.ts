@@ -1,5 +1,5 @@
 'use client';
-import { useAppRouter, AppStores, web3AuthInstance } from '@/lib';
+import { useAppRouter, AppStores } from '@/lib';
 import { useCallback, useMemo } from 'react';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 

@@ -10,7 +10,6 @@ type IRoutes =
   | '/savings'
   | '/docs'
   | '/inbox'
-  | '/xmtp'
   | '/support'
   | '/vendor-chat'
   | '/kyc'

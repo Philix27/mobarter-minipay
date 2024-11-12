@@ -16,9 +16,7 @@
     "toformat",
     "trpc",
     "viem",
-    "Wagmi",
-    "Xmpt",
-    "xmtp"
+    "Wagmi"
   ],
   "files.exclude": {
     "**/.git": true,
